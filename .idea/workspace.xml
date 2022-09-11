@@ -10,32 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3afb6e2-6253-4b8a-9b05-ae73c0d83109" name="Changes" comment="my library">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/manager/UserManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/AddUserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/GetAuthorImageServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/GetBookImageServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/LogoutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/addUser.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/image/defaultProfilePic.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/AuthorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/AuthorManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/BooksManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/BooksManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/AddAuthorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/AddAuthorServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/AddBookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/AddBookServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/addAuthor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/addAuthor.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/addBooks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/addBooks.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/authors.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/authors.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/books.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/books.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/filter/UserFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +189,8 @@
       <workItem from="1662744816254" duration="4024000" />
       <workItem from="1662810979959" duration="2241000" />
       <workItem from="1662813764041" duration="2817000" />
-      <workItem from="1662875294157" duration="3652000" />
+      <workItem from="1662875294157" duration="3961000" />
+      <workItem from="1662879867273" duration="1193000" />
     </task>
     <task id="LOCAL-00001" summary="my library">
       <created>1662557462203</created>
@@ -229,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662559256340</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="my library">
+      <created>1662879288902</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1662879288902</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
