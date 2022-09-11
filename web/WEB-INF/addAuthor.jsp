@@ -12,12 +12,15 @@
 </head>
 <body>
 Please input author's data
-<form action="/author/add" method="post">
+<form action="/author/add" method="post" enctype="multipart/form-data">
 <input type="text" name="name" placeholder="please input author name"/><br>
 <input type="text" name="surname" placeholder="please input author surname"><br>
 <input type="email" name="email" placeholder="please input author email"><br>
 <input type="number" name="age" placeholder="please input author age"><br>
-<input type="submit" name="add">
+    image:
+    <input type="file" name="image"><br>
+<input type="submit" name="Register">
+
 </form>
 </body>
 </html>

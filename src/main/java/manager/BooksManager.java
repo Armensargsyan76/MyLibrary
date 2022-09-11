@@ -15,13 +15,14 @@ public class BooksManager {
     AuthorManager authorManager = new AuthorManager();
 
     public void addBook(Book book) {
-        String sql = "insert into book(title, description, price, author_id) VALUES(?,?,?,?)";
+        String sql = "insert into book(title, description, price, author_id, image) VALUES(?,?,?,?,?)";
         try {
             PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, book.getTitle());
             ps.setString(2, book.getDescription());
             ps.setDouble(3, book.getPrice());
             ps.setInt(4, book.getAuthor().getId());
+            ps.setString(5, book.getImage());
             ps.executeUpdate();
             ResultSet resultSet = ps.getGeneratedKeys();
             if (resultSet.next()) {
@@ -73,14 +74,15 @@ public class BooksManager {
 
 
     public void editBook(Book book) {
-        String sql = "update  book set title = ?, description = ?, price=? , author_id = ? WHERE id = ?";
+        String sql = "update  book set title = ?, description = ?, price=? , author_id = ?, image = ? WHERE id = ?";
         try {
             PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, book.getTitle());
             ps.setString(2, book.getDescription());
             ps.setDouble(3, book.getPrice());
             ps.setInt(4, book.getAuthor().getId());
-            ps.setInt(5, book.getId());
+            ps.setString(5, book.getImage());
+            ps.setInt(6, book.getId());
             ps.executeUpdate();
             ResultSet resultSet = ps.getGeneratedKeys();
         } catch (SQLException e) {
@@ -94,6 +96,7 @@ public class BooksManager {
             book.setTitle(resultSet.getString("title"));
             book.setDescription(resultSet.getString("description"));
             book.setPrice(resultSet.getDouble("price"));
+            book.setImage(resultSet.getString("image"));
             int authorId = resultSet.getInt("author_id");
             Author author = authorManager.getAuthorById(authorId);
             book.setAuthor(author);

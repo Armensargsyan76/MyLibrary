@@ -14,13 +14,14 @@ public class AuthorManager {
     private Connection connection = DBConnectionProvider.getInstance().getConnection();
 
     public void addAuthor(Author author) {
-        String sql = "insert into author(name, surname, email, age) VALUES(?,?,?,?)";
+        String sql = "insert into author(name, surname, email, age, image) VALUES(?,?,?,?,?)";
         try {
             PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, author.getName());
             ps.setString(2, author.getSurname());
             ps.setString(3, author.getEmail());
             ps.setDouble(4, author.getAge());
+            ps.setString(5, author.getImage());
             ps.executeUpdate();
             ResultSet resultSet = ps.getGeneratedKeys();
             if (resultSet.next()) {
@@ -72,16 +73,16 @@ public class AuthorManager {
     }
 
     public void editAuthor(Author author) {
-        String sql = "update author set name=?, surname=?, email=?, age=? WHERE id=?";
+        String sql = "update author set name=?, surname=?, email=?, age=?, image=? WHERE id=?";
         try {
             PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, author.getName());
             ps.setString(2, author.getSurname());
             ps.setString(3, author.getEmail());
             ps.setInt(4, author.getAge());
-            ps.setInt(5, author.getId());
+            ps.setString(5, author.getImage());
+            ps.setInt(6, author.getId());
             ps.executeUpdate();
-            ResultSet resultSet = ps.getGeneratedKeys();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -94,6 +95,7 @@ public class AuthorManager {
         author.setSurname(resultSet.getString("surname"));
         author.setEmail(resultSet.getString("email"));
         author.setAge(resultSet.getInt("age"));
+        author.setImage(resultSet.getString("image"));
         return author;
     }
 
